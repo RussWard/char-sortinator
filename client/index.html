@@ -3,8 +3,12 @@
 <html>
   <head>
     <link rel="stylesheet" href="./styles.css">
+    <script type="text/javascript" src="./helpers.js"></script>
   </head>
   <body>
-    hello from index.html
+    <form action="http://localhost:8080/sort" method="POST">
+      <input type="text" name="string" placeholder="enter a string to sort">
+      <button type="submit">sort string</button>
+    </form> 
   </body>
 </html>

@@ -9,7 +9,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(express.static(path.join(__dirname, '../client')));
 
-app.use('/sort', router)
+app.use('/', router)
 
 app.listen('8080',() => {
   console.log('app is listening on port 8080')

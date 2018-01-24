@@ -11,10 +11,11 @@ class charSortinator {
   }
 
   submit(string) {
+    let body = { string }
     console.log(JSON.stringify(string));
     fetch('/sort', {
       method: 'POST',
-      body: JSON.stringify(string),
+      body: JSON.stringify(body),
       mode: 'cors',
       headers: new Headers({
         'Content-Type' : 'application/json'

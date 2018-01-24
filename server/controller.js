@@ -1,8 +1,9 @@
 const sort = (req, res) => {
-  console.log(req.body)
-  let charArray = req.body.split('');
+  let charArray = req.body.string.split('');
   //sort the string charchters and return the sorted string
-  charArray.sort();
+  charArray.sort((a, b) => {
+    return b.charCodeAt() - a.charCodeAt();
+  });
   let response = charArray.join('');
   response = JSON.stringify(response);
   res.status(200);

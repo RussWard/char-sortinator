@@ -6,9 +6,10 @@
     <script type="text/javascript" src="./helpers.js"></script>
   </head>
   <body>
-    <form action="http://localhost:8080/sort" method="POST">
-      <input type="text" name="string" placeholder="enter a string to sort">
-      <button type="submit">sort string</button>
-    </form> 
+    <div class="input-form">
+      <input type="text" id="string">
+      <button type="submit" onclick="sortinator.submit(document.getElementById('string').value)">sort characters</button>
+    </div> 
+    <div id="history"></div>
   </body>
 </html>

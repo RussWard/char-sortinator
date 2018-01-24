@@ -6,8 +6,12 @@ class charSortinator {
   }
 
   showHistory() {
-    let list = this.history.map(string => `<div>${string}</div>`)
-    document.getElementById('history').innerHTML = list;
+    document.getElementById('history').innerHTML = null;
+    this.history.forEach((item) => {
+      let node = document.createElement('div')
+      node.innerHTML = item;
+      document.getElementById('history').appendChild(node);
+    })
   }
 
   submit(string) {
